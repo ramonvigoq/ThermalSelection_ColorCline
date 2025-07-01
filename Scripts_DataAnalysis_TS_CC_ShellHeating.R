@@ -1,3 +1,5 @@
+setwd("")# Working directory with the raw data
+
 library(readxl)
 rawdata <- read_excel("TS_CC_RData_ShellHeating.xlsx")
 str(rawdata)
