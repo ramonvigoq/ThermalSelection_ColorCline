@@ -1,6 +1,3 @@
-setwd("C:/Users/Emilio/OneDrive/OneDrive - Universidade de Vigo/01 Research/1Littorina/Litt_ClineDescription/Litt_CD_2Temperature/Litt_CD_Temp_1ShellHeating/Litt_CD_Temp_SH_4DataAnalyisis")
-setwd("C:/Users/162ra/OneDrive - Universidade de Vigo/01 Research/1Littorina/Litt_ClineDescription/Litt_CD_2Temperature/Litt_CD_Temp_1ShellHeating/Litt_CD_Temp_SH_4DataAnalyisis")
-# Open --------------------------------------------------------------------
 library(readxl)
 rawdata <- read_excel("TS_CC_RData_ShellHeating.xlsx")
 str(rawdata)
