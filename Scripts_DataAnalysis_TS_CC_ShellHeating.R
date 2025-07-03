@@ -139,7 +139,6 @@ alive_data %>%
   theme_classic() +
   theme(legend.position = "top")
 
-
 # Function for Fisher's exact test; recovery ~ color
 results <- list()
 FTest_color <- function(data) {
@@ -171,7 +170,6 @@ arousa_data %>% filter(pop == "Allopatric") %>% FTest_color
 pontevedra_data %>% FTest_color
 # OUTPUT: no differences between allopatric color morphs at any temperature in the Ria de Arousa
 
-
 # Binary logistic regression of shell temperature over all the variables in sympatric populations; Supplementary Table 7
 library(pscl)
 glm(recovery ~ col * temp * ria, data = sympatric_data,
@@ -182,8 +180,6 @@ glm(recovery ~ col * temp * ria, data = sympatric_data,
 glm(recovery ~ col * temp * pop, data = arousa_data,
     family = "binomial") %>%  
   {list(summary(.), pR2(.))} # 0.6144 McFadden's pseudo R2
-
-
 
 # Function for Fisher's exact test; recovery ~ population type 
 FTest_pop <- function(data) {
@@ -241,8 +237,6 @@ emptysym_data %>% lm(log(shell_temp) ~ col * temp * ria, .) %>%
 # Log-LR model; Supplementary Table 9
 emptysym_data %>% lm(log(shell_temp) ~ col * temp * ria, .) %>% summary
 # OUT: significance on body presence overall and when reaching 50 Celisius
-
-
 
 # ANOVA of shell temperature over color and experimental temperature
 # Assumptions
